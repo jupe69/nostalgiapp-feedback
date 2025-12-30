@@ -37,32 +37,28 @@ body:
     validations:
       required: false
 
-  - type: dropdown
-    id: browser
+  - type: input
+    id: macos_version
     attributes:
-      label: Browser
-      options:
-        - Chrome
-        - Firefox
-        - Safari
-        - Edge
-        - Other
+      label: macOS Version
+      description: "Go to Apple menu > About This Mac (e.g., 14.2, 15.0)"
+      placeholder: "e.g., 14.2"
     validations:
       required: true
 
-  - type: dropdown
-    id: os
+  - type: textarea
+    id: logs
     attributes:
-      label: Operating System
-      options:
-        - Windows
-        - macOS
-        - Linux
-        - iOS
-        - Android
-        - Other
+      label: Logs
+      description: |
+        Please provide logs to help us debug:
+        1. Go to Help menu > Clear Logs
+        2. Reproduce the bug
+        3. Go to Help menu > Copy Logs to Clipboard
+        4. Paste below
+      render: shell
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: screenshots
